@@ -3,12 +3,10 @@ const nameOutput = document.querySelector("#name-output");
 const nameInput = document.querySelector("#name-input");
 
 const showName = (event) => {
+  if( nameInput.value === "" ) {
+    return nameOutput.textContent = "Anonymous";
+  };
   nameOutput.textContent = event.currentTarget.value;
 };
 
-const showAnonymous = (event) => {
-  nameOutput.textContent = "Anonymous";
-};
-
 nameInput.addEventListener("input", showName);
-nameInput.addEventListener("blur", showAnonymous);

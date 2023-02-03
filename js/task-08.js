@@ -7,9 +7,10 @@ const handleSubmit = (event) => {
     elements: { email, password },
   } = event.currentTarget;
 
-  if (email.value === "" || password.value === "")
+  if (email.value === "" || password.value === "") {
     return alert("All fields should be fill!");
-
+  }
+    
   console.log(`email: ${email.value}, Password: ${password.value}`);
 
   event.currentTarget.reset();
